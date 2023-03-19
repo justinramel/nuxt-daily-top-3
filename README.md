@@ -1,4 +1,13 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Daily Top 3
+
+## Introduction
+
+This the demo code used in a series of articles:
+
+- [Introduction to Nuxt & Vue.js: Getting Started](https://blog.justinramel.com/introduction-to-nuxt-vuejs-getting-started)
+
+
+## Getting Started
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
