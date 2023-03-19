@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model top3 {
+  id        Int      @id @default(autoincrement())
+  created_at DateTime @default(now()) @db.Date
+  todos     todo[]
+}
+
+model todo {
+  id       Int     @id @default(autoincrement())
+  title    String
+  complete Boolean @default(false)
+  top3     top3    @relation(fields: [top3_id], references: [id], onDelete: Cascade)
+  top3_id   Int
+}
